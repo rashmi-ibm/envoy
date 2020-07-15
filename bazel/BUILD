@@ -270,8 +270,8 @@ config_setting(
 )
 
 config_setting(
-    name = "linux_ppc",
-    values = {"cpu": "ppc"},
+    name = "linux_ppc64le",
+    values = {"cpu": "ppc64le"},
 )
 
 config_setting(
@@ -379,7 +379,7 @@ alias(
         {
             ":linux_x86_64": ":linux_x86_64",
             ":linux_aarch64": ":linux_aarch64",
-            ":linux_ppc": ":linux_ppc",
+            ":linux_ppc64le": ":linux_ppc64le",
             ":linux_s390x": "linux_s390x",
             ":linux_mips64": ":linux_mips64",
             # If we're not on an linux platform return a value that will never match in the select() statement calling this
