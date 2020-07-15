@@ -207,7 +207,7 @@ envoy_cc_library(
     srcs = ["options_impl.cc"] + select({
         "//bazel:linux_x86_64": ["options_impl_platform_linux.cc"],
         "//bazel:linux_aarch64": ["options_impl_platform_linux.cc"],
-        "//bazel:linux_ppc": ["options_impl_platform_linux.cc"],
+        "//bazel:linux_ppc64le": ["options_impl_platform_linux.cc"],
         "//bazel:linux_mips64": ["options_impl_platform_linux.cc"],
         "//conditions:default": ["options_impl_platform_default.cc"],
     }),
@@ -217,7 +217,7 @@ envoy_cc_library(
     ] + select({
         "//bazel:linux_x86_64": ["options_impl_platform_linux.h"],
         "//bazel:linux_aarch64": ["options_impl_platform_linux.h"],
-        "//bazel:linux_ppc": ["options_impl_platform_linux.h"],
+        "//bazel:linux_ppc64le": ["options_impl_platform_linux.h"],
         "//bazel:linux_mips64": ["options_impl_platform_linux.h"],
         "//conditions:default": [],
     }),
