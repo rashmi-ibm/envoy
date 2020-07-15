@@ -12,7 +12,7 @@ envoy_package()
 
 bool_flag(
     name = "moonjit",
-    build_setting_default = False,
+    build_setting_default = True,
 )
 
 config_setting(
